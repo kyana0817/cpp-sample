@@ -11,7 +11,7 @@ add_executable(cpp-sample
 )
 
 target_link_libraries(cpp-sample
-    PRIVATE calc
+    PRIVATE calc ${AWSSDK_LINK_LIBRARIES}
 )
 
 set_target_properties(cpp-sample

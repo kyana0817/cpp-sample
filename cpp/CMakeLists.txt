@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
+include(FetchContent)
 
 set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 set(CMAKE_CXX_STANDARD 17)
@@ -7,6 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(CPPSample VERSION 0.0.2)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
+find_package(AWSSDK REQUIRED COMPONENTS s3)
 
 add_subdirectory(src)
 
